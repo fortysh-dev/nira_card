@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Max Dimov</title>
 
-  <!-- Fonts (как у тебя: Raleway + Open Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
@@ -33,19 +32,19 @@
         radial-gradient(900px 600px at 15% 0%, rgba(126,192,159,.35), transparent 55%),
         radial-gradient(900px 600px at 85% 15%, rgba(99,99,99,.18), transparent 55%),
         linear-gradient(135deg, rgba(126,192,159,.25), rgba(240,244,242,1) 55%, rgba(126,192,159,.10));
-      display: grid;
-      place-items: center;
-      padding: 22px 14px;
+      display: fixed;
+      place-items: start center;
+      padding: 0px 14px 8px;
     }
 
     .wrap{
       width: 100%;
-      max-width: 420px; /* визиточный масштаб */
+      max-width: 420px;
     }
 
     .top-wave{
       position: relative;
-      height: 120px;
+      height: 108px;
       border-radius: var(--radius);
       overflow: hidden;
       background: linear-gradient(180deg, var(--gray), var(--green));
@@ -61,7 +60,7 @@
     }
 
     .card{
-      margin-top: -54px;
+      margin-top: -46px;
       background: var(--card);
       backdrop-filter: blur(10px);
       border: 1px solid var(--border);
@@ -85,7 +84,7 @@
       box-shadow: 0 14px 34px rgba(0,31,14,.10);
       object-fit: cover;
       background: #fff;
-      margin-top: -44px; /* красиво “вылезает” из хедера */
+      margin-top: -38px;
     }
 
     h1{
@@ -155,7 +154,7 @@
     .primary:hover{ transform: translateY(-1px); opacity: .95; }
 
     .section{
-      margin-top: 14px;
+      margin-top: 12px;
       border-radius: 14px;
       border: 1px solid var(--border);
       background: rgba(255,255,255,.85);
@@ -204,7 +203,7 @@
     }
 
     .find{
-      margin-top: 16px;
+      margin-top: 12px;
     }
     .find h3{
       margin: 0 0 10px;
@@ -253,16 +252,15 @@
     }
 
     .footer{
-      margin-top: 12px;
+      margin-top: 8px;
       text-align: center;
       font-size: 12px;
       color: rgba(107,114,128,.95);
     }
 
-    /* Мобайл плотнее */
     @media (max-width: 360px){
-      .top-wave{ height: 110px; }
-      .avatar{ width: 96px; height: 96px; }
+      .top-wave{ height: 100px; }
+      .avatar{ width: 94px; height: 94px; margin-top: -34px; }
       .icon-btn{ width: 52px; height: 52px; }
     }
   </style>
@@ -274,22 +272,12 @@
 
     <section class="card">
       <div class="profile">
-        <!-- Фото (сохранено) -->
-        <img
-          class="avatar"
-          src="https://qr.view.page/uploads/vcard/7bn0fM_f2960288c6ec9329.jpg"
-          alt="Max Dimov"
-        />
-
+<img class="avatar" src="./images/max-dimov.jpg" alt="Max Dimov" />
         <h1>Max Dimov</h1>
         <p class="role">Head of Marketing Department</p>
-
-        <!-- Небольшое описание (можешь поменять) -->
         <p class="meta">
               Nira DEX is a compliant trading platform designed to reduce on-chain risk.
         </p>
-
-        <!-- Быстрые иконки: телефон + email -->
         <div class="icon-row" aria-label="Quick actions">
           <a class="icon-btn" href="tel:+37379606908" aria-label="Call">
             <!-- phone icon -->
@@ -433,7 +421,6 @@
   </main>
 
   <script>
-    // Делает vCard и скачивает как .vcf (кнопка Add Contact)
     const contact = {
       firstName: "Max",
       lastName: "Dimov",
